@@ -675,7 +675,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
     );
     if (confirm == true && mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context)?.resetNotSupported ?? '데이터 초기화는 서버 API 추가 후 지원됩니다.')));
+      try {
+        await _api.resetData();
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context)?.resetSuccess ?? '데이터가 초기화되었습니다.')));
+        }
+      } catch (e) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(AppLocalizations.of(context)?.resetFailed ?? '초기화에 실패했습니다. 다시 시도해주세요.')));
+        }
+      }
     }
   }
 

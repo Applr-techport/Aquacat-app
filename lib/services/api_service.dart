@@ -91,6 +91,11 @@ class ApiService {
     return Map<String, dynamic>.from(res.data);
   }
 
+  Future<Map<String, dynamic>> resetData() async {
+    final res = await _dio.post('/user/reset-data');
+    return Map<String, dynamic>.from(res.data);
+  }
+
   Future<void> deleteAccount() async {
     await _dio.delete('/user/account');
   }

@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -156,6 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                 ),
               ),
+              if (Platform.isIOS) ...[
               const SizedBox(height: 16),
               // Apple Login
               SizedBox(
@@ -179,6 +181,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
+              ],
               const SizedBox(height: 12),
               if (kDebugMode)
                 TextButton(

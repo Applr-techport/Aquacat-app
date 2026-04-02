@@ -73,16 +73,20 @@ class PurchaseService {
       if (purchase.status == PurchaseStatus.purchased ||
           purchase.status == PurchaseStatus.restored) {
         if (purchase.productID == removeAdsId) {
-          await _setPremium(true);
-          // Record on server
+          // Verify and record on server first
           try {
+            final receipt = Platform.isAndroid
+                ? purchase.verificationData.serverVerificationData
+                : purchase.verificationData.serverVerificationData;
             await ApiService().dio.post('/purchase', data: {
               'productId': removeAdsId,
               'platform': Platform.isAndroid ? 'android' : 'ios',
-              'price': 1900,
+              'price': int.tryParse(_product?.rawPrice.toStringAsFixed(0) ?? '1900') ?? 1900,
               'transactionId': purchase.purchaseID,
+              'receipt': receipt,
             });
           } catch (_) {}
+          await _setPremium(true);
         }
       }
 

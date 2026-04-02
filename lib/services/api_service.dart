@@ -45,6 +45,15 @@ class ApiService {
     return res.data;
   }
 
+  Future<Map<String, dynamic>> appleLogin(String identityToken, {String? email, String? fullName}) async {
+    final res = await _dio.post('/auth/apple', data: {
+      'identityToken': identityToken,
+      'email': email,
+      'fullName': fullName,
+    });
+    return res.data;
+  }
+
   // User
   Future<Map<String, dynamic>> getProfile() async {
     final res = await _dio.get('/user/profile');

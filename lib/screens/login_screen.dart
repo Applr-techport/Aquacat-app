@@ -48,6 +48,33 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
+  Future<void> _loginWithApple() async {
+    setState(() => _loading = true);
+    try {
+      final success = await AuthService().signInWithApple();
+      if (!mounted) return;
+
+      if (success) {
+        final profile = await ApiService().getProfile();
+        if (!mounted) return;
+
+        if (profile['weight'] == null || profile['weight'] == 0) {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const OnboardingScreen()));
+        } else {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const MainScreen()));
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)?.login ?? 'Login failed')),
+        );
+      }
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
   Future<void> _loginWithGoogle() async {
     setState(() => _loading = true);
     try {
@@ -135,11 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: double.infinity,
                 height: 52,
                 child: ElevatedButton(
-                  onPressed: _loading ? null : () {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('Apple ${l?.login ?? "로그인"} coming soon!')),
-                    );
-                  },
+                  onPressed: _loading ? null : _loginWithApple,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
                     foregroundColor: Theme.of(context).brightness == Brightness.dark ? Colors.black : Colors.white,

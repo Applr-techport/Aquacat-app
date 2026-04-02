@@ -46,7 +46,7 @@ class PurchaseService {
     _subscription = _iap.purchaseStream.listen(
       _onPurchaseUpdate,
       onDone: () => _subscription?.cancel(),
-      onError: (_) {},
+      onError: (e) => debugPrint('PurchaseService stream error: $e'),
     );
 
     // Load product
@@ -85,7 +85,9 @@ class PurchaseService {
               'transactionId': purchase.purchaseID,
               'receipt': receipt,
             });
-          } catch (_) {}
+          } catch (e) {
+            debugPrint('PurchaseService server record failed: $e');
+          }
           await _setPremium(true);
         }
       }

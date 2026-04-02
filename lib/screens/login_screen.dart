@@ -116,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SvgPicture.asset('assets/svg/happy.svg', width: 200, height: 200),
               const SizedBox(height: 32),
               Text(
-                l?.appName ?? '아쿠아캣',
+                l?.appName ?? '냥냥워터',
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.w800,

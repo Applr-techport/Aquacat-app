@@ -15,7 +15,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get login => '로그인';
 
   @override
-  String get loginTitle => '아쿠아캣';
+  String get loginTitle => '냥냥워터';
 
   @override
   String get loginSubtitle => '물 마시기 습관을 만들어요';

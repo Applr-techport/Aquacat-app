@@ -28,7 +28,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
 
   List<Widget> _koSections() => [
     _section('1. 개인정보의 수집 및 이용 목적',
-      '아쿠아캣(이하 "앱")는 다음의 목적을 위해 개인정보를 수집 및 이용합니다.\n'
+      '냥냥워터(이하 "앱")는 다음의 목적을 위해 개인정보를 수집 및 이용합니다.\n'
       '• 회원 식별 및 서비스 제공\n'
       '• 맞춤형 수분 섭취 목표 계산\n'
       '• 서비스 개선 및 통계 분석'),
@@ -47,7 +47,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
     _section('6. 이용자의 권리',
       '이용자는 언제든지 자신의 개인정보를 조회, 수정, 삭제할 수 있으며, 계정 삭제를 통해 탈퇴할 수 있습니다.'),
     _section('7. 개인정보 보호책임자',
-      '• 서비스명: 아쿠아캣\n• 이메일: support@aquacat.app'),
+      '• 서비스명: 냥냥워터\n• 이메일: support@aquacat.app'),
     _section('8. 시행일', '본 개인정보처리방침은 2026년 2월 16일부터 시행됩니다.'),
     const SizedBox(height: 40),
   ];

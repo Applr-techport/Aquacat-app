@@ -88,7 +88,7 @@ class NotificationService {
           android: AndroidNotificationDetails(
             'water_reminder',
             '물 마시기 알림',
-            channelDescription: '아쿠아캣 물 마시기 리마인더',
+            channelDescription: '냥냥워터 물 마시기 리마인더',
             importance: Importance.high,
             priority: Priority.high,
           ),

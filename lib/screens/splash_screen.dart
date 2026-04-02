@@ -65,7 +65,7 @@ class _SplashScreenState extends State<SplashScreen> {
             SvgPicture.asset('assets/svg/happy.svg', width: 140, height: 140),
             const SizedBox(height: 24),
             Text(
-              AppLocalizations.of(context)?.appName ?? '아쿠아캣',
+              AppLocalizations.of(context)?.appName ?? '냥냥워터',
               style: const TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w800,

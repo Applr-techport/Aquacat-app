@@ -95,7 +95,7 @@ class _AquaCatAppState extends State<AquaCatApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
-      title: '아쿠아캣',
+      title: '냥냥워터',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

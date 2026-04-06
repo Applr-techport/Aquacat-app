@@ -170,6 +170,8 @@
   "noPurchases": "No purchases",
   "purchaseHint": "Purchase ad removal to see it here",
   "resetNotSupported": "Data reset coming soon.",
+  "resetSuccess": "Data has been reset.",
+  "resetFailed": "Reset failed. Please try again.",
   "dailyGoal": "Daily goal",
   
   "catMessageNormal1": "Time for water~",

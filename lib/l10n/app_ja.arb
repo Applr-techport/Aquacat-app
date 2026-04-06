@@ -170,6 +170,8 @@
   "noPurchases": "購入履歴がありません",
   "purchaseHint": "広告削除を購入するとここに表示されます",
   "resetNotSupported": "データリセットは準備中です。",
+  "resetSuccess": "データがリセットされました。",
+  "resetFailed": "リセットに失敗しました。もう一度お試しください。",
   "dailyGoal": "1日の目標",
   
   "catMessageNormal1": "お水の時間だよ~",

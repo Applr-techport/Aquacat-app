@@ -170,6 +170,8 @@
   "noPurchases": "Sin compras",
   "purchaseHint": "Compra la eliminación de anuncios para verlo aquí",
   "resetNotSupported": "Restablecimiento de datos próximamente.",
+  "resetSuccess": "Los datos se han restablecido.",
+  "resetFailed": "Error al restablecer. Inténtalo de nuevo.",
   "dailyGoal": "Meta diaria",
   
   "catMessageNormal1": "¡Hora del agua~!",

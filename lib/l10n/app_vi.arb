@@ -170,6 +170,8 @@
   "noPurchases": "Không có lịch sử mua",
   "purchaseHint": "Mua xóa quảng cáo sẽ hiển thị ở đây",
   "resetNotSupported": "Đặt lại dữ liệu sắp có.",
+  "resetSuccess": "Dữ liệu đã được đặt lại.",
+  "resetFailed": "Đặt lại thất bại. Vui lòng thử lại.",
   "dailyGoal": "Mục tiêu hàng ngày",
   
   "catMessageNormal1": "Giờ uống nước nè~",

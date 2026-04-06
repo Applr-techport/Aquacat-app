@@ -170,6 +170,8 @@
   "noPurchases": "无购买记录",
   "purchaseHint": "购买去广告后会显示在这里",
   "resetNotSupported": "数据重置即将推出。",
+  "resetSuccess": "数据已重置。",
+  "resetFailed": "重置失败，请重试。",
   "dailyGoal": "每日目标",
   
   "catMessageNormal1": "该喝水啦~",
